@@ -22,7 +22,7 @@ public class PlayerController : MonoBehaviour
 
     public void SetHorizontalInput(float input)
     {
-        horizontalInput = input; // Set input based on button press
+        horizontalInput = input;
     }
 
     void Movement(float direction)
@@ -38,15 +38,15 @@ public class PlayerController : MonoBehaviour
 
     void Rotation()
     {
-        if (horizontalInput < 0) // Left
+        if (horizontalInput < 0) 
         {
             transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(0, 0, rotationAngle), rotationSpeed * Time.deltaTime);
         }
-        else if (horizontalInput > 0) // Right
+        else if (horizontalInput > 0) 
         {
             transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(0, 0, -rotationAngle), rotationSpeed * Time.deltaTime);
         }
-        else // Neutral
+        else 
         {
             transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(0, 0, 0), rotationSpeed * Time.deltaTime);
         }

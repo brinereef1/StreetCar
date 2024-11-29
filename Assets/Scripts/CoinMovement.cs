@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CoinMovement : MonoBehaviour
@@ -13,7 +11,6 @@ public class CoinMovement : MonoBehaviour
         if (transform.position.y < -7)
         {
             Destroy(this.gameObject);
-            Debug.Log("destroyed");
         }
     }
 
